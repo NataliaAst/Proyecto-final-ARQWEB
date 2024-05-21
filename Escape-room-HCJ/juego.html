@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escape Room Virtual</title>
-    <link rel="stylesheet" href="styles copy.css">
+    <link rel="stylesheet" href="styles-copy.css">
 </head>
 <body>
     <div id="game-container">
+      <div id="start-screen">
         <h1>Escape Room Virtual</h1>
-        <div id="room1" class="room">
-            <p>¿Qué tiene cabeza, pero no piensa?</p>
-            <input type="text" id="answer1" placeholder="Tu respuesta">
-            <button onclick="checkAnswer1()">Enviar</button>
-        </div>
-        <div id="room2" class="room" style="display: none;">
-            <p>Soy alto cuando soy joven, y bajo cuando soy viejo. ¿Qué soy?</p>
-            <input type="text" id="answer2" placeholder="Tu respuesta">
-            <button onclick="checkAnswer2()">Enviar</button>
+        <button onclick="startGame()">Comenzar Juego</button>
+    </div>
+    <div id="room1" class="room" style="display: none;">
+        <p>Acertijo 1: ¿Qué tiene cabeza, pero no piensa?</p>
+        <button onclick="checkAnswer1('ajo')">Ajo</button>
+        <button onclick="checkAnswer1('una almohada')">Una almohada</button>
+        <button onclick="checkAnswer1('un martillo')">Un martillo</button>
+    </div>
+    <div id="room2" class="room" style="display: none;">
+        <p>Acertijo 2: Soy alto cuando soy joven, y bajo cuando soy viejo. ¿Qué soy?</p>
+        <button onclick="checkAnswer2('una vela')">Una vela</button>
+        <button onclick="checkAnswer2('un árbol')">Un árbol</button>
+        <button onclick="checkAnswer2('un lápiz')">Un lápiz</button>
         </div>
         <div id="room3" class="room" style="display: none;">
             <p>¡Felicidades! Has resuelto todos los acertijos y has escapado. El redondo gato negro se despide de ti alzando su patita.</p>
