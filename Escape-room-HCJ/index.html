@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escape Room Virtual</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room Virtual</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="https://picsum.photos/2000/200" alt="" class="header-img"> 
-      <h1>Escape Room Virtual</h1>
-      <h2>-Calabozo virtual-</h2>
-    </header>
-    <main>
-      <p>Entras a una habitación completamente blanca, no parece haber una salida a la vista. Sin darte cuenta un rechoncho gato negro se ha sentado frente a ti y te dice: ''Bienvenido, el malvado señor demonio de la arquitectura web te ha encerrado aquí, para salir debes resolver 2 acertijos, nada de matar monstruos aquí, somos diplomáticos, buena suerte''.</p>
-      <p>(=`ω´=)</p>
-      <a href="juego.html" class="btn">¡Comenzar!</a>
-    </main>
+    <div id="game-container">
+      <div id="start-screen">
+        <img src="https://picsum.photos/300/50" alt="" class="img"> 
+        <h1>Escape Room Virtual</h1>
+        <h2>-Calabozo el demonio de la Arquitectura Web-</h2>
+        <p>Entras a una habitación completamente blanca, no parece haber una salida a la vista. Sin darte cuenta un rechoncho gato negro se ha sentado frente a ti y te dice:</p>
+        <p1>''Bienvenido, el malvado señor demonio de la arquitectura web te ha encerrado aquí, para salir debes resolver 4 acertijos, nada de matar monstruos, aquí somos diplomáticos, buena suerte''.</p1>
+        <p>(=`ω´=)</p>
+        <button onclick="startGame()">Comenzar Juego</button>
+    </div>
+    <div id="room1" class="room" style="display: none;">
+        <p>¿Qué tiene cabeza, pero no piensa?</p>
+        <button onclick="checkAnswer1('ajo')">Ajo</button>
+        <button onclick="checkAnswer1('una almohada')">Una almohada</button>
+        <button onclick="checkAnswer1('un martillo')">Un martillo</button>
+        <div class="hint">
+         <p><strong>Pista:</strong> Se usa en la cocina.</p>
+        </div>
+    </div>
+    <div id="room2" class="room" style="display: none;">
+        <p>Soy alto cuando soy joven, y bajo cuando soy viejo. ¿Qué soy?</p>
+        <button onclick="checkAnswer2('una vela')">Una vela</button>
+        <button onclick="checkAnswer2('un árbol')">Un árbol</button>
+        <button onclick="checkAnswer2('un lápiz')">Un lápiz</button>
+        <div class="hint">
+         <p><strong>Pista:</strong> Se encuentra en fiestas de cumpleaños.</p>
+        </div>
+    </div>
+    <div id="room3" class="room" style="display: none;">
+            <p>¿Cuántos animales tengo en casa sabiendo que todos son perros menos dos, todos son gatos menos dos, y que todos son los loros menos dos?</p>
+            <button onclick="checkAnswer3('un perro, un gato y un loro')">un perro, un gato y un loro</button>
+            <button onclick="checkAnswer3('dos perros y un gato')">dos perros y un gato</button>
+            <button onclick="checkAnswer3('un loro, dos perros y un gato')">un loro, dos perros y un gato</button>
+            <div class="hint">
+             <p><strong>Pista:</strong>3.</p>
+            </div>
+    </div>
+    <div id="room4" class="room" style="display: none;">
+        <p>Vuelo sin alas, lloro sin ojos.¿Qué soy?</p>
+        <button onclick="checkAnswer4('un avión')">Un avión</button>
+        <button onclick="checkAnswer4('un búho')">Un búho</button>
+        <button onclick="checkAnswer4('las nubes')">Las nubes</button>
+        <div class="hint">
+         <p><strong>Pista:</strong>Visible cuando llueve.</p>
+        </div>
+</div>
+        <div id="room5" class="room" style="display: none;">
+            <p>¡Felicidades! Has resuelto todos los acertijos y has escapado. El redondo gato negro se despide de ti alzando su patita.</p>
+            <p>ヾ(=`ω´=)ノ”</p>
+        </div>
+    </div>
     <footer>
-      <p>&copy; 2024 Escape Room Virtual. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Escape Room Virtual. Todos los derechos reservados.</p>
     </footer>
-  </div>
+    <script src="script.js"></script>
 </body>
 </html>
